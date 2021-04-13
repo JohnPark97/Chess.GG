@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess.gg</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!--Title-->
+<h1 id="page-title" style="font-family:fantasy">Chess.gg</h1>
+<!--Sankey Diagram-->
+<div id="sankey-container">
+    <h1 id="sankey-name">Opener Statistics</h1>
+    <svg id="sankey-diagram"></svg>
+    <div class="legend"></div>
+</div>
+<!--Filters-->
+<button id="deselect-all">Deselect All</button>
+<div id="filters">
+</div>
+<!--Openings horizontal bar graph and win rate graphs-->
+<div>
+    <div id="top-openings-container">
+        <div id="column-names">
+            <h1 id="opening-name">Opening Names</h1>
+            <h1 id="name-count"># of Games That Used This Opening</h1>
+        </div>
+        <svg id="play-text-chart"></svg>
+        <svg id="horizontal-bar-chart"></svg>
+    </div>
+    <div id="win-rate-bar-chart-container">
+        <h1 id="win-rate-column">Win Rate by Colors</h1>
+        <svg id="win-rate-bar-chart">
+        </svg>
+    </div>
+</div>
+<!--Top players and chessboard-->
+<div id="top-user-chart-container">
+    <div id="player-column-names">
+        <h1 id="username-column">User Names (ratings)</h1>
+        <h1 id="opening-name-column"># of Games That Used This Opening</h1>
+    </div>
+    <div id="top-user-container">
+        <svg id="top-user-table"></svg>
+        <svg id="user-move-table"></svg>
+    </div>
+</div>
+<!--Scatter Plot-->
+<div id="rating-scatter-plot-container">
+    <h1 id="rating-scatter-plot-column">Rating of matches</h1>
+    <svg id="rating-scatter-plot"></svg>
+    <div id="scatter-plot-tooltip"></div>
+</div>
+
+<div>
+    <div id="player-profile-container">
+        <div id="player-profile-column-container">
+            <div id="player-profile-title-container">
+                <p id="player-profile-title">Player Profile</p>
+            </div>
+            <p id="match-history-title">Last 3 Matches </p>
+
+        </div>
+        <div id="player-profile-sub-container">
+            <p id="player-name-text"></p>
+            <svg id="player-profile"></svg>
+
+        </div>
+        <div id="opponent-container">
+            <div id="opponent-container-texts">
+                <p id="vs" class="sub-titles">Opponent</p>
+                <select id="selectButton"> </select>
+                <p id="turns" class="sub-titles">Turns:</p>
+                <p id="match-result" class="sub-titles">Match Result:</p>
+                <p id="white-id" class="sub-titles">White:</p>
+                <p id="black-id" class="sub-titles">Black:</p>
+                <p id="move-used" class="sub-titles">Opening Used:</p>
+                <table class="chess-board">
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <th>a</th>
+                        <th>b</th>
+                        <th>c</th>
+                        <th>d</th>
+                        <th>e</th>
+                        <th>f</th>
+                        <th>g</th>
+                        <th>h</th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <td class="coord8a light"></td>
+                        <td class="coord8b dark"></td>
+                        <td class="coord8c light"></td>
+                        <td class="coord8d dark"></td>
+                        <td class="coord8e light"></td>
+                        <td class="coord8f dark"></td>
+                        <td class="coord8g light"></td>
+                        <td class="coord8h dark"></td>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <td class="coord7a dark"></td>
+                        <td class="coord7b light"></td>
+                        <td class="coord7c dark"></td>
+                        <td class="coord7d light"></td>
+                        <td class="coord7e dark"></td>
+                        <td class="coord7f light"></td>
+                        <td class="coord7g dark"></td>
+                        <td class="coord7h light"></td>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <td class="coord6a light"></td>
+                        <td class="coord6b dark"></td>
+                        <td class="coord6c light"></td>
+                        <td class="coord6d dark"></td>
+                        <td class="coord6e light"></td>
+                        <td class="coord6f dark"></td>
+                        <td class="coord6g light"></td>
+                        <td class="coord6h dark"></td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td class="coord5a dark"></td>
+                        <td class="coord5b light"></td>
+                        <td class="coord5c dark"></td>
+                        <td class="coord5d light"></td>
+                        <td class="coord5e dark"></td>
+                        <td class="coord5f light"></td>
+                        <td class="coord5g dark"></td>
+                        <td class="coord5h light"></td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td class="coord4a light"></td>
+                        <td class="coord4b dark"></td>
+                        <td class="coord4c light"></td>
+                        <td class="coord4d dark"></td>
+                        <td class="coord4e light"></td>
+                        <td class="coord4f dark"></td>
+                        <td class="coord4g light"></td>
+                        <td class="coord4h dark"></td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td class="coord3a dark"></td>
+                        <td class="coord3b light"></td>
+                        <td class="coord3c dark"></td>
+                        <td class="coord3d light"></td>
+                        <td class="coord3e dark"></td>
+                        <td class="coord3f light"></td>
+                        <td class="coord3g dark"></td>
+                        <td class="coord3h light"></td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td class="coord2a light"></td>
+                        <td class="coord2b dark"></td>
+                        <td class="coord2c light"></td>
+                        <td class="coord2d dark"></td>
+                        <td class="coord2e light"></td>
+                        <td class="coord2f dark"></td>
+                        <td class="coord2g light"></td>
+                        <td class="coord2h dark"></td>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <td class="coord1a dark"></td>
+                        <td class="coord1b light"></td>
+                        <td class="coord1c dark"></td>
+                        <td class="coord1d light"></td>
+                        <td class="coord1e dark"></td>
+                        <td class="coord1f light"></td>
+                        <td class="coord1g dark"></td>
+                        <td class="coord1h light"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p id="moves" class="sub-titles">Moves:</p>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!--Tooltip-->
+<div id="tooltip"></div>
+<!--Scripts-->
+<script src="js/d3.v6.min.js"></script>
+<script src="js/HorizontalBarChart.js"></script>
+<script src="js/UserTable.js"></script>
+<script src="js/UserMoveTable.js"></script>
+<script src="js/PlayTextChart.js"></script>
+<script src="js/PlayerProfileChart.js"></script>
+<script src="js/PlayerMatchHistory.js"></script>
+<script src="js/WinRateBarChart.js"></script>
+<script src="js/RatingScatterPlot.js"></script>
+<script src="js/Sankey.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

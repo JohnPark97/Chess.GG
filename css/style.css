@@ -1,0 +1,492 @@
+#page-title {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    width: 100%;
+    background: #ffe9cc;
+    overflow-x: scroll;
+    margin-left: 30px;
+}
+#top-openings-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 3px solid #425775;
+    height: 600px;
+    width: 1000px;
+    border-radius: 9px 5px 5px 9px;
+    background: #ffedb9;
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+#openings-container {
+}
+
+#top-openings-container svg {
+    margin-top: 55px;
+    margin-bottom: 0;
+}
+
+#deselect-all {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    border-color: #9c9c9c;;
+    background: #FFFFFF;
+    padding: 15px 20px;
+    color: #5f5f5f;
+}
+
+#deselect-all:hover {
+    background-color: #d9d9d9;
+}
+
+#filters {
+    margin-bottom: 10px;
+}
+
+#filters button {
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #5f5f5f;
+    border-color: #9c9c9c;;
+    border-radius: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    outline-width: 1px;
+
+    padding: 10px 10px;
+}
+
+#filters button:hover {
+    background-color: #d9d9d9;
+}
+
+#play-text-chart {
+    font-family: Times New Roman, sans-serif;
+}
+
+#horizontal-bar-chart {
+    border-left: 3px solid #425775;
+    margin-left: 21px;
+}
+
+.bar:hover {
+    opacity: .5;
+}
+
+.win-rate-bar:hover {
+    opacity: .5;
+}
+
+#column-names {
+    width: 985px;
+    position: absolute;
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 6px 0 0 0;
+}
+
+#column-names h1 {
+    margin: 0 0 0 0;
+    padding: 15px 0;
+    font-size: 22px;
+}
+
+#opening-name {
+    width: 375px;
+    display: inline-block;
+    text-align: center;
+    border-right: 3px solid #425775;
+    color: #425775;
+}
+
+
+#name-count {
+    width: 600px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 75px;
+    color: #425775;
+}
+
+.count {
+    font-size: 12px;
+}
+
+.playname {
+    fill: #080e47;
+    font-size: 20px;
+}
+
+#top-user-chart-container {
+    margin-top: 50px;
+    width: 700px;
+    border: 3px solid #425775;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+#win-rate-bar-chart-container {
+    display: inline-block;
+    border: 3px solid #425775;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#rating-scatter-plot-container {
+    display: inline-block;
+    border: 3px solid #425775;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#win-rate-column {
+    margin: 0 0 0 0;
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    border-radius: 6px 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+}
+
+#win-rate-bar-chart {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffedb9;
+    display: inline-block;
+}
+
+#rating-scatter-plot-column {
+    margin: 0 0 0 0;
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    border-radius: 6px 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+}
+
+#rating-scatter-plot {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffedb9;
+    display: inline-block;
+}
+
+#top-user-container {
+    font-family: Times New Roman, sans-serif;
+    fill: #00052d;
+    font-size: 18px;
+    background: #ffedb9;
+    border-radius: 0 0 6px 6px;
+}
+
+#player-profile-container {
+    background: #ffedb9;
+    width: 1000px;
+    height: 1050px;
+    margin-top: 20px;
+    border: 3px solid #425775;
+    border-radius: 8px;
+}
+
+#player-profile-column-container {
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    border-radius: 6px 6px 0 0;
+}
+
+#player-profile {
+    display: inline-block;
+
+}
+
+#player-profile-sub-container {
+    width: auto;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#opponent-container {
+    position: absolute;
+    width: 500px;
+    height: auto;
+    display: inline-block;
+}
+
+#opponent-container select {
+    display: inline-block;
+}
+
+#player-column-names {
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    border-radius: 6px 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+}
+
+#player-column-names h1 {
+    margin: 0 0 0 0;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+#username-column {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    border-right: 3px solid #425775;
+}
+
+.username:hover {
+    opacity: .6;
+}
+.username.active:hover {
+    opacity: 1;
+}
+
+#opening-name-column {
+    width: 375px;
+    display: inline-block;
+    text-align: center;
+}
+
+#top-user-table {
+    border-right: 3px solid #425775;
+    display: inline-block;
+}
+
+
+
+#user-move-table {
+    display: inline-block;
+}
+
+#match-history-title {
+    width: 500px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+    margin: 20px 0 0 0;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+}
+
+#opponent-container-texts p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#vs {
+    display: inline-block;
+    margin-right: 15px;
+
+}
+
+#turns {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 15px;
+}
+
+#player-profile-title-container {
+    display: inline-block;
+    border-right: 3px solid #425775;
+
+}
+#player-profile-title {
+    width: 450px;
+    margin: 20px 0px 20px 10px;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#player-name-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 30px 0px 40px 10px;
+
+}
+
+.sub-titles {
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#white-id {
+    width: auto;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#black-id {
+    width: auto;
+    display: inline-block;
+}
+
+.move.active:hover {
+    opacity: 1;
+}
+
+.move:hover {
+    opacity: .6;
+}
+
+.chess-board {
+    min-width: 425px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.chess-board th {
+    padding: .5em;
+}
+
+#selectButton {
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+
+.chess-board th + th {
+    border-bottom: 1px solid #000;
+}
+
+.chess-board th:first-child,
+.chess-board td:last-child {
+    border-right: 1px solid #000;
+}
+
+.chess-board tr:last-child td {
+    border-bottom: 1px solid;
+}
+
+.chess-board th:empty {
+    border: none;
+}
+
+.chess-board td {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    font-size: 32px;
+    line-height: 0;
+}
+
+.chess-board .light {
+    background: #eee;
+}
+
+.chess-board .dark {
+    background: #aaa;
+}
+
+.dot {
+    fill: #2eff00;
+    stroke: black;
+}
+
+#tooltip {
+    position: absolute;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 2px 2px 3px 0px rgb(92 92 92);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+}
+
+#scatter-plot-tooltip {
+    position: absolute;
+    display: none;
+    background: #fff;
+    box-shadow: 3px 3px 3px 0px rgb(92 92 92);
+    border: 1px solid #ddd;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px;
+    min-width: 160px;
+    color: #333;
+}
+
+#scatter-plot-tooltip ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+}
+
+/* Sankey diagram styles */
+#sankey-container {
+    border: 3px solid #425775;
+    border-radius: 10px;
+    margin-top: 30px;
+    background: #ffedb9;
+    width: max-content;
+}
+
+#sankey-name {
+    margin: 0 0 0 0;
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+    background: #cfb188;
+    border-bottom: 3px solid #425775;
+    border-radius: 6px 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #425775;
+}
+
+#sankey-diagram {
+    margin: 0 auto; /* poor attempt at centering */
+    height: auto !important; /* overrides inline */
+    width: auto !important; /* overrides inline */
+
+    display: block;
+}
+
+.point {
+    stroke: #ababab;
+    stroke-width: 0.6px;
+}
+
+.node rect {
+    cursor: move;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+.node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+}
+
+.link:hover {
+    stroke-opacity: .5;
+}
+
+.legend {
+    margin-right:20px;
+    margin-left:60px;
+}
